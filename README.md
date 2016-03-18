@@ -30,7 +30,7 @@ move into project folder in the command line and type gulp serve
 
 ## Known Bugs
 
-_Only lists up to 30 repositories. List of repositories is not replaced when a second person is searched._
+_List of repositories is not replaced when a second person is searched._
 
 ## Technologies Used
 
