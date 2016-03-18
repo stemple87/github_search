@@ -60,16 +60,16 @@ gulp.task('bowerCSS', function () {
 });
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
-//scss
+
 gulp.task('cssBuild', function() {
   return gulp.src('scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
-//gulp serve
+
 gulp.task('serve', function() {
   browserSync.init({
     server: {
