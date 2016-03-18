@@ -9,27 +9,27 @@
   <body>
     <div class="container">
       <div class="box">
-
-
         <h1>Search github for username</h1>
         <label for="userName">Enter username</label>
         <input type="userName" name="userName" id="userName">
         <button id="button" class="button" type="submit">Search</button>
-
         </div>
         <div class="showUserInfo">
-          <h4>
-            <p>Results for: <span id="showUserUsername"></span></p>
-            <br>
-            <p>User's name: <span id="showUserName"></span></p>
-            <br>
-            <p>Github repository: <span id='showUserGithubEmail'></p>
-            <br>
-            <p>User's email: <span id="showUserEmail"></span></p>
-            <br>
-          </h4>
+          <h4><p>Results for: <span id="showUserUsername"></span></p></h4>
+          <br>
+          <p>User's name: <span id="showUserName"></span></p>
+          <br>
+          <p>Github repository: <span id='showUserGithubEmail'></p>
+          <br>
+          <p>User's email: <span id="showUserEmail"></span></p>
+          <br>
+          <div class="repo-box">
+            <p>List of all user repos:
+            <ul>
+              <span id="showAllUserRepos"></span>
+            </ul>
+          </div>
       </div>
     </div>
-
   </body>
 </html>
