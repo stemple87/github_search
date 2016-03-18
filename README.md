@@ -9,13 +9,22 @@ _This is an application that uses the github API to search through their databas
 
 ## Setup/Installation Requirements
 ```
+Install node.js from https://nodejs.org/en/
+
 Go to your github.com account.
+
 Click on the settings area.
+
 Select Personal Access Tokens from the sidebar.
+
 Select generate new token with no checkboxes checked.
+
 Copy your API key.
+
 Create a new file at top level of project called .env
+
 In the .env file type exports.apiKey = "" and paste your API key between the quotes.
+
 move into project folder in the command line and type gulp serve
 ```
 
