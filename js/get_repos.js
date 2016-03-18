@@ -9,11 +9,15 @@ exports.getRepos = function(search){
     $("#showUserEmail").text(response.email);
     //repo info
     $.get('https://api.github.com/users/' + response.login + '/repos' + '?access_token=' + apiKey + '&per_page=1000').then(function(repoResponse){
-      var repoResponseInfo = [];
+      console.log(repoResponse);
+      var repoResponseName = [];
+      var repoResponseDescription = [];
       for (var i = 0; i < repoResponse.length; i++) {
-        repoResponseInfo[i] = repoResponse[i].html_url;
-        $("#showAllUserRepos").append("<li>" + repoResponseInfo[i] + "</li>");
+        repoResponseName[i] = repoResponse[i].name;
+        repoResponseDescription[i] = repoResponse[i].description;
+        $("#showAllUserRepos").append("<li> Name: " + repoResponseName[i] + " - Description: " + repoResponseDescription[i] + "</li>");
       }
+
     }).fail(function(error){
       console.log(error.responseJSON.message);
     });
