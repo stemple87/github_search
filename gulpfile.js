@@ -46,7 +46,7 @@ gulp.task('jshint', function(){
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
-// bower start
+
 gulp.task('bowerJS', function () {
   return gulp.src(lib.ext('js').files)
     .pipe(concat('vendor.min.js'))
@@ -88,7 +88,8 @@ gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
 gulp.task('htmlBuild', function() {
   browserSync.reload();
 });
-gulp.task("build", ['clean'], function(){ //goes at end
+
+gulp.task("build", ['clean'], function(){
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
